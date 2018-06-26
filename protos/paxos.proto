@@ -10,7 +10,7 @@ service PaxosNode {
 
 	// This node sends a proposal to every other node participating in the consensus
 	// and receives acknowledgments marking their acceptance or rejection.
-    // The value (IP address) of the acknowledment with the highest seq_no is chosen.
+    	// The value (IP address) of the acknowledment with the highest seq_no is chosen.
 	rpc prepare(proposal) returns (ack) {}
 
 	// Requests acceptance from other nodes that the chosen value (IP) should be the leader.
@@ -30,6 +30,7 @@ message proposal {
 message ack {
 	float seq_no = 1;
 	string value = 2;
+	float seq_no_v = 3;
 }
 
 message request_acceptance{
