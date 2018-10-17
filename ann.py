@@ -1,5 +1,5 @@
 from scipy.ndimage import imread
-from scipy.misc import imresize
+from scipy.misc.pilutil import imresize
 from sklearn.cross_validation import train_test_split
 from autograd.scipy.misc import logsumexp
 
